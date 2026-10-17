@@ -26,9 +26,12 @@
 .music-button.show{display:flex}.music-button.playing{animation:spin 5s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 .intro{padding:14px 10px;background:#f4ecd9;text-align:center;color:#355b46;font:10px Arial,sans-serif;letter-spacing:.15em}
-.scroll-scene{height:112svh;height:112dvh;position:relative;background:#dfe8d9}
+.scroll-scene{height:100svh;height:100dvh;position:relative;background:#dfe8d9}
 .sticky-frame{position:sticky;top:0;height:100svh;height:100dvh;max-height:1000px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#dfe8d9}
-.sticky-frame img{display:block;width:100%;height:100%;object-fit:contain;object-position:center;will-change:opacity;transition:opacity .12s linear}
+.sticky-frame img{display:block;width:100%;height:100%;object-fit:contain;object-position:center;will-change:opacity;transition:opacity .14s ease}
+.sticky-frame img.frame-next{position:absolute;inset:0;opacity:0;pointer-events:none}
+.sticky-frame{isolation:isolate}
+.sticky-frame img{background:#dfe8d9}
 .scroll-label{position:absolute;bottom:max(18px,env(safe-area-inset-bottom));left:0;right:0;text-align:center;font:9px Arial,sans-serif;letter-spacing:.15em;color:#fff;text-shadow:0 2px 8px #000;opacity:.75;pointer-events:none}
 footer{background:#f4ecd9;color:#254d3b;text-align:center;padding:32px 18px 60px;line-height:1.65}footer h2{font-size:34px;font-weight:400;font-style:italic;margin:0 0 10px}footer p{font:12px/1.8 Arial,sans-serif;margin:7px auto;max-width:330px}footer a{display:inline-block;margin-top:13px;padding:11px 19px;border:1px solid #4f8068;border-radius:30px;text-decoration:none;color:#254d3b;font:11px Arial,sans-serif;letter-spacing:.08em}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.cover-art:before,.cover-art:after{transition:none}}
@@ -60,9 +63,12 @@ sequences.slice(1,-1).forEach((seq,idx)=>{
  const section=document.createElement('section');section.className='scroll-scene';section.dataset.scene=seq.id;
  const sticky=document.createElement('div');sticky.className='sticky-frame';
  const img=document.createElement('img');img.alt='Adegan undangan '+(idx+1);img.loading=idx===0?'eager':'lazy';img.decoding='async';
- img.src=seq.frames[0];sticky.appendChild(img);
+ const nextImg=document.createElement('img');nextImg.className='frame-next';nextImg.alt='';nextImg.decoding='async';
+ img.src=seq.frames[0];nextImg.src=seq.frames[0];sticky.appendChild(img);sticky.appendChild(nextImg);
+ // Preload all frames in this scene to prevent blank/white flashes during scrolling.
+ seq.frames.forEach(src=>{const preload=new Image();preload.src=src;});
  const label=document.createElement('div');label.className='scroll-label';label.textContent='GULIR UNTUK MELANJUTKAN';sticky.appendChild(label);
- section.appendChild(sticky);sceneRoot.appendChild(section);sceneEls.push({section,img,seq,last:-1});
+ section.appendChild(sticky);sceneRoot.appendChild(section);sceneEls.push({section,img,nextImg,seq,last:-1,showNext:false});
 });
 function updateFrames(){
  const vh=window.innerHeight||innerHeight;
@@ -70,8 +76,16 @@ function updateFrames(){
    const r=item.section.getBoundingClientRect();
    const travel=Math.max(1,item.section.offsetHeight-vh);
    const progress=Math.max(0,Math.min(1,-r.top/travel));
-   const frameCount=item.seq.frames.length-1; const startProgress=Math.min(.55, Math.max(.25, 4/Math.max(1,frameCount))); const idx=Math.min(frameCount,Math.floor((startProgress + progress*(1-startProgress))*frameCount+.5));
-   if(idx!==item.last){item.img.src=item.seq.frames[idx];item.last=idx;}
+   const frameCount=item.seq.frames.length-1; const startProgress=Math.min(.55, Math.max(.25, 4/Math.max(1,frameCount))); const eased=Math.min(1,progress*1.15); const idx=Math.min(frameCount,Math.floor((startProgress + eased*(1-startProgress))*frameCount+.5));
+   if(idx!==item.last){
+     const target=item.seq.frames[idx];
+     const incoming=item.showNext?item.img:item.nextImg;
+     const outgoing=item.showNext?item.nextImg:item.img;
+     if(incoming.getAttribute('src')!==target) incoming.src=target;
+     incoming.style.opacity='0';
+     requestAnimationFrame(()=>{incoming.style.opacity='1';outgoing.style.opacity='0';});
+     item.showNext=!item.showNext;item.last=idx;
+   }
  }
 }
 let raf=0;window.addEventListener('scroll',()=>{if(!raf)raf=requestAnimationFrame(()=>{updateFrames();raf=0;})},{passive:true});

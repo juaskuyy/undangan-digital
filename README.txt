@@ -15,3 +15,5 @@ Cara pakai:
 Pembaruan kecepatan: durasi scroll per scene dipercepat; setiap scene sekarang berganti dalam jarak scroll yang lebih pendek (112svh/dvh, dari 145svh/dvh).
 
 Pembaruan: tiap adegan dimulai dari frame yang lebih maju agar tulisan yang muncul bertahap di video referensi sudah lebih lengkap saat adegan pertama kali terlihat. Scroll tetap menggerakkan rangkaian frame hingga frame akhir.
+
+Pembaruan: scene dipercepat lagi (panjang scene 100dvh), semua frame dipreload untuk mencegah flash putih, dan dua layer gambar crossfade saat pergantian frame agar lebih mulus.
