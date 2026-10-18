@@ -1,19 +1,11 @@
-UNDANGAN SCROLL ANIMATION — Juaa & Rawr
+UNDANGAN PERNIKAHAN SANTI FATIMAH & SYAUQI SYAUQILLAH
 
-Cara deploy:
+Cara melihat:
 1. Ekstrak ZIP.
-2. Upload index.html, music.mp3, dan folder frames ke root repository GitHub.
-3. Cloudflare Pages: framework preset None, build command kosong, output directory root.
-4. Jangan upload index.html saja; folder frames dan music.mp3 wajib ikut.
+2. Buka index.html di browser atau unggah seluruh isi folder ke hosting statis.
+3. Jangan pisahkan index.html, folder assets, dan music.mp3.
 
-Cara pakai:
-- Sentuh pintu untuk membuka undangan dan memulai musik.
-- Scroll halaman; urutan frame setiap adegan mengikuti posisi scroll, jadi bukan pemutar video.
-- Tulisan/ornamen dalam adegan mengikuti rekaman Canva asli karena frame berasal dari klip yang dikirim.
-- Efek ini mengubah adegan mengikuti scroll, bukan merekonstruksi setiap objek terpisah. Untuk animasi teks mandiri, aset transparan diperlukan.
-
-Pembaruan kecepatan: durasi scroll per scene dipercepat; setiap scene sekarang berganti dalam jarak scroll yang lebih pendek (112svh/dvh, dari 145svh/dvh).
-
-Pembaruan: tiap adegan dimulai dari frame yang lebih maju agar tulisan yang muncul bertahap di video referensi sudah lebih lengkap saat adegan pertama kali terlihat. Scroll tetap menggerakkan rangkaian frame hingga frame akhir.
-
-Pembaruan: scene dipercepat lagi (panjang scene 100dvh), semua frame dipreload untuk mencegah flash putih, dan dua layer gambar crossfade saat pergantian frame agar lebih mulus.
+Catatan:
+- Desain memakai aset halaman Canva yang tersedia di percakapan, font Great Vibes + Cormorant Garamond + Playfair Display.
+- Musik baru mulai setelah tombol Buka Undangan / tombol musik disentuh karena aturan autoplay browser.
+- Tombol Google Maps memakai pencarian alamat yang disebutkan sebelumnya. Jika ingin tautan pin persis, ganti URL di index.html dengan tautan Google Maps asli.

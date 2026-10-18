@@ -1,103 +1,26 @@
 <!doctype html>
 <html lang="id">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#092f2c">
-<title>Undangan Pernikahan</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f8e8d9"><meta name="description" content="Undangan Pernikahan Santi Fatimah & Syauqi Syauqillah">
+<title>Undangan Pernikahan — Santi Fatimah & Syauqi Syauqillah</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box}html{background:#092f2c;scroll-behavior:smooth;overflow-x:hidden}body{margin:0;background:#092f2c;font-family:Georgia,'Times New Roman',serif;overflow-x:hidden;color:#f8eed8}
-.site{width:100%;max-width:520px;margin:0 auto;background:#dfe8d9;box-shadow:0 0 36px #0005}
-.cover{height:100svh;height:100dvh;min-height:540px;position:relative;overflow:hidden;background:#102a28;isolation:isolate;cursor:pointer}
-.cover-art{position:absolute;inset:0;background:#102a28 url('assets/halaman-01.webp') center/100% 100% no-repeat}
-.cover-art:before,.cover-art:after{content:"";position:absolute;top:0;bottom:0;width:50%;background:linear-gradient(130deg,#2d4140,#122321 75%);border:3px solid #198c7b;box-shadow:inset 0 0 18px #0008;transition:transform 1.65s cubic-bezier(.72,0,.18,1);z-index:2}
-.cover-art:before{left:0;transform-origin:left center;border-right:2px solid #42c8ae}
-.cover-art:after{right:0;transform-origin:right center;border-left:2px solid #42c8ae}
-.handle{position:absolute;z-index:3;top:42%;height:24%;width:5px;border-radius:9px;background:linear-gradient(90deg,#64777c,#f4f5f4,#66767b);box-shadow:0 0 2px #fff;transition:opacity .4s}
-.handle:before,.handle:after{content:"";position:absolute;left:-6px;width:15px;height:15px;border-radius:50%;background:linear-gradient(90deg,#71888c,#f3f3ef,#687c7d)}
-.handle:before{top:15%}.handle:after{bottom:15%}.handle.left{left:36%}.handle.right{right:36%}
-.cover.open .cover-art:before{transform:perspective(900px) rotateY(-112deg)}.cover.open .cover-art:after{transform:perspective(900px) rotateY(112deg)}.cover.open .handle{opacity:0}
-.cover-hint{position:absolute;z-index:4;bottom:max(28px,env(safe-area-inset-bottom));left:0;right:0;text-align:center;font:11px Arial,sans-serif;letter-spacing:.22em;color:#f6e8cc;text-shadow:0 2px 10px #000}
-.cover.open .cover-hint{opacity:0;transition:opacity .25s}
-.cover-title{position:absolute;inset:0;z-index:1;display:grid;place-content:center;text-align:center;color:#f6e8cc;opacity:0;transition:opacity .9s 1s}
-.cover-title small{font:10px Arial,sans-serif;letter-spacing:.3em}.cover-title strong{font-size:42px;font-weight:400;font-style:italic;margin-top:12px}
-.cover.open .cover-title{opacity:1}
-.music-button{position:fixed;z-index:20;right:max(14px,calc((100vw - 520px)/2 + 14px));bottom:18px;width:44px;height:44px;border-radius:50%;border:1px solid #fff9;background:#1d5549;color:#fff;box-shadow:0 3px 14px #0004;font:18px Arial,sans-serif;display:none;align-items:center;justify-content:center}
-.music-button.show{display:flex}.music-button.playing{animation:spin 5s linear infinite}
-@keyframes spin{to{transform:rotate(360deg)}}
-.intro{padding:14px 10px;background:#f4ecd9;text-align:center;color:#355b46;font:10px Arial,sans-serif;letter-spacing:.15em}
-.scroll-scene{height:100svh;height:100dvh;position:relative;background:#dfe8d9}
-.sticky-frame{position:sticky;top:0;height:100svh;height:100dvh;max-height:1000px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#dfe8d9}
-.sticky-frame img{display:block;width:100%;height:100%;object-fit:contain;object-position:center;will-change:opacity;transition:opacity .14s ease}
-.sticky-frame img.frame-next{position:absolute;inset:0;opacity:0;pointer-events:none}
-.sticky-frame{isolation:isolate}
-.sticky-frame img{background:#dfe8d9}
-.scroll-label{position:absolute;bottom:max(18px,env(safe-area-inset-bottom));left:0;right:0;text-align:center;font:9px Arial,sans-serif;letter-spacing:.15em;color:#fff;text-shadow:0 2px 8px #000;opacity:.75;pointer-events:none}
-footer{background:#f4ecd9;color:#254d3b;text-align:center;padding:32px 18px 60px;line-height:1.65}footer h2{font-size:34px;font-weight:400;font-style:italic;margin:0 0 10px}footer p{font:12px/1.8 Arial,sans-serif;margin:7px auto;max-width:330px}footer a{display:inline-block;margin-top:13px;padding:11px 19px;border:1px solid #4f8068;border-radius:30px;text-decoration:none;color:#254d3b;font:11px Arial,sans-serif;letter-spacing:.08em}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.cover-art:before,.cover-art:after{transition:none}}
-</style>
-</head>
-<body>
-<main class="site">
-<section class="cover" id="cover" aria-label="Sentuh untuk membuka undangan" role="button" tabindex="0">
- <div class="cover-art"></div><span class="handle left"></span><span class="handle right"></span>
- <div class="cover-title"><div><small>THE WEDDING OF</small><br><strong>Juaa &amp; Rawr</strong></div></div>
- <div class="cover-hint">SENTUH UNTUK MEMBUKA</div>
-</section>
-<div class="intro" id="intro">GULIR KE BAWAH — GERAKAN ADEGAN MENGIKUTI SCROLL</div>
-<div id="scenes"></div>
-<footer>
- <h2>Juaa &amp; Rawr</h2>
- <p>31 Oktober 2026</p>
- <p>Kp. Ciharus Lebak, RT/RW 02/04<br>Desa Girijaya, Kecamatan Cikajang, Garut</p>
- <a href="https://www.google.com/maps/search/?api=1&amp;query=Kp+Ciharus+Lebak+Desa+Girijaya+Cikajang+Garut" target="_blank" rel="noopener">BUKA LOKASI</a>
-</footer>
-</main>
-<button class="music-button" id="musicBtn" aria-label="Putar atau jeda musik">♫</button>
-<audio id="music" src="music.mp3" preload="none" loop></audio>
+:root{--ink:#244536;--rose:#a45e65;--cream:#fff8ef;--gold:#b58a52}*{box-sizing:border-box}html{scroll-behavior:smooth;background:#f5e6d8}body{margin:0;color:var(--ink);font-family:'Cormorant Garamond',serif;background:#f5e6d8;overflow-x:hidden}main{max-width:520px;margin:auto;background:#f9ecdf;box-shadow:0 0 45px #5a44351c}.cover{height:100svh;min-height:620px;position:relative;overflow:hidden;background:#112c2b url('assets/halaman-01.webp') center/cover no-repeat;display:grid;place-items:center;text-align:center;color:#fff8ee}.cover:before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,#081a1a20,#081a1a6b)}.cover-content{position:relative;padding:24px;animation:rise 1.4s both}.eyebrow{font:10px Arial,sans-serif;letter-spacing:.28em;text-transform:uppercase}.cover h1{font-family:'Great Vibes',cursive;font-size:clamp(42px,11vw,64px);line-height:1.15;font-weight:400;margin:22px 0 10px;text-shadow:0 2px 15px #0004}.cover .date{font:12px Arial,sans-serif;letter-spacing:.18em}.open-btn{margin-top:35px;padding:13px 22px;border:1px solid #fff8eea8;border-radius:30px;background:#fff8ee12;color:#fff8ee;font:10px Arial,sans-serif;letter-spacing:.15em;cursor:pointer;backdrop-filter:blur(8px)}.open-btn:active{transform:scale(.98)}.section{min-height:82svh;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;padding:54px 25px;background-position:center;background-size:cover;background-repeat:no-repeat;isolation:isolate}.section:before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,#fff7ed8a,#fff7ed8f);z-index:-1}.section .content{width:100%;max-width:390px}.section .ornament{color:var(--rose);font-size:22px;letter-spacing:.22em;margin-bottom:15px}.script{font-family:'Great Vibes',cursive;font-weight:400;color:#31553f;font-size:clamp(39px,10vw,58px);line-height:1.16;margin:8px 0}.kicker{font-size:13px;letter-spacing:.19em;text-transform:uppercase;color:var(--rose);margin:0 0 18px}.body-copy{font-size:clamp(18px,4.7vw,22px);line-height:1.42;margin:12px auto;max-width:360px}.arabic{font-family:serif;font-size:28px;line-height:1.8;margin:0 0 10px}.names{font-family:'Great Vibes',cursive;font-size:clamp(40px,10vw,58px);line-height:1.12;margin:12px 0 8px}.family{font-size:20px;line-height:1.4;margin:0 auto;max-width:330px}.divider{width:70px;height:1px;background:var(--gold);margin:23px auto}.date-day{font-size:25px;letter-spacing:.15em;margin:10px 0}.date-big{font-family:'Playfair Display',serif;font-size:clamp(30px,8vw,43px);line-height:1.2;margin:5px 0;color:#31553f}.schedule{padding:18px 12px;margin:14px 0;border:1px solid #b58a5266;background:#fff8efb8;border-radius:2px}.schedule h3{font:italic 27px 'Playfair Display',serif;margin:0 0 7px}.schedule p{font-size:21px;margin:0}.map-card{padding:18px 15px;background:#fff8efdd;border:1px solid #b58a5266}.map-card p{font-size:20px;line-height:1.4}.map-link{display:inline-block;text-decoration:none;color:#fffaf3;background:#31553f;padding:12px 20px;border-radius:28px;font:10px Arial,sans-serif;letter-spacing:.14em;margin-top:12px}.closing{font-family:'Playfair Display',serif;font-size:24px;letter-spacing:.12em}.small-copy{font-size:19px;line-height:1.45}.family-close{font-size:19px;line-height:1.5;margin:10px auto}.music{position:fixed;right:15px;bottom:18px;z-index:10;border:1px solid #fff7ef;background:#31553fe8;color:white;width:44px;height:44px;border-radius:50%;font-size:19px;box-shadow:0 4px 18px #0002;cursor:pointer}.music.playing{animation:spin 5s linear infinite}.reveal{opacity:0;transform:translateY(24px);filter:blur(3px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1),filter .9s ease}.reveal.visible{opacity:1;transform:translateY(0);filter:blur(0)}.type-line{display:inline}.cursor:after{content:'|';display:inline-block;margin-left:2px;color:var(--rose);animation:blink .8s steps(1) infinite}.type-ready{visibility:hidden}.type-ready.visible{visibility:visible}@keyframes blink{50%{opacity:0}}@keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}@keyframes spin{to{transform:rotate(360deg)}}footer{text-align:center;padding:26px 20px 38px;background:#f8e9db;font-size:15px;color:#49634f} @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{transition:none;opacity:1;transform:none;filter:none}.music.playing{animation:none}}
+</style></head><body><main>
+<section class="cover" id="cover"><div class="cover-content"><p class="eyebrow">Undangan Pernikahan</p><h1>Santi Fatimah<br>&amp;<br>Syauqi Syauqillah</h1><p class="date">MINGGU · 27 DESEMBER 2026</p><button class="open-btn" id="openBtn">BUKA UNDANGAN ↓</button></div></section>
+<section class="section" style="background-image:url('assets/halaman-02.webp')"><div class="content"><p class="kicker reveal">Dengan memohon rahmat Allah SWT</p><div class="arabic reveal">بسم الله الرحمن الرحيم</div><p class="body-copy reveal">Assalamu'alaikum warahmatullahi Wabarakatuh</p><div class="divider reveal"></div><p class="body-copy reveal">Puji syukur atas kehadirat Allah SWT  yang telah menciptakan makhluknya berpasang-pasangan. Izinkanlah kami mengundang Bapak/Ibu, Saudara/i dalam resepsi pernikahan putra putri kami:</p></div></section>
+<section class="section" style="background-image:url('assets/halaman-03.webp')"><div class="content"><p class="kicker reveal">Mempelai wanita</p><h2 class="names reveal">Santi Fatimah</h2><p class="family reveal">Putri dari Bpk. Dadan &amp; Ibu Ucu</p><div class="divider reveal"></div><p class="kicker reveal">Mempelai pria</p><h2 class="names reveal">Syauqi Syauqillah</h2><p class="family reveal">Putra Dari Bpk. Kh.Aam Abdul Karim idrus &amp; Ibu Hj.Euis</p></div></section>
+<section class="section" style="background-image:url('assets/halaman-06.webp')"><div class="content"><p class="body-copy reveal">Yang Insyaallah Akan Diselenggarakan Pada</p><div class="divider reveal"></div><p class="date-day reveal">Minggu</p><h2 class="date-big reveal">27 Desember 2026</h2><div class="divider reveal"></div><div class="schedule reveal"><h3>Akad Nikah</h3><p>Pukul 09.00 WIB - Selesai</p></div><div class="schedule reveal"><h3>Resepsi</h3><p>Pukul 13.00 WIB - Selesai</p></div></div></section>
+<section class="section" style="background-image:url('assets/halaman-08.webp')"><div class="content"><p class="kicker reveal">Lokasi acara</p><div class="map-card reveal"><h2 class="script">Scan GoogleMaps</h2><p>QR nya yang tadi diatas sama lokasinya sama</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Kp+Ciharus+Lebak+RT+02+RW+04+Desa+Girijaya+Kecamatan+Cikajang+Garut" target="_blank" rel="noopener">BUKA GOOGLE MAPS ↗</a></div></div></section>
+<section class="section" style="background-image:url('assets/halaman-09.webp')"><div class="content"><p class="closing reveal">TERIMA KASIH</p><div class="divider reveal"></div><p class="small-copy reveal">Merupakan suatu kehormatan dan kebahagiaan<br>bagi kami apabila Bapak/Ibu, Saudara/i berkenan<br>hadir dan memberikan restu</p><p class="body-copy reveal" style="margin-top:26px">Waalaikumsalam Warahmatullahi Wabarakatuh</p><div class="divider reveal"></div><p class="kicker reveal">Kami yang berbahagia</p><p class="family-close reveal">Kel. Besar Bpk. Dadan &amp; Ibu Ucu</p><p class="family-close reveal">Kel. Besar Bpk. Kh.Aam Abdul Karim idrus &amp; Ibu Hj.Euis</p></div></section>
+<footer>Terima kasih atas doa dan restu Anda ♡</footer></main>
+<audio id="musicAudio" src="music.mp3" loop preload="metadata"></audio><button class="music" id="musicBtn" aria-label="Putar musik" title="Putar / jeda musik">♫</button>
 <script>
-const sequences=[{"id": "scene01", "duration": 1.299989, "frames": ["frames/scene01/f-000.webp", "frames/scene01/f-001.webp", "frames/scene01/f-002.webp", "frames/scene01/f-003.webp", "frames/scene01/f-004.webp"]}, {"id": "scene02", "duration": 5.266667, "frames": ["frames/scene02/f-000.webp", "frames/scene02/f-001.webp", "frames/scene02/f-002.webp", "frames/scene02/f-003.webp", "frames/scene02/f-004.webp", "frames/scene02/f-005.webp", "frames/scene02/f-006.webp", "frames/scene02/f-007.webp", "frames/scene02/f-008.webp", "frames/scene02/f-009.webp", "frames/scene02/f-010.webp", "frames/scene02/f-011.webp", "frames/scene02/f-012.webp"]}, {"id": "scene03", "duration": 6.5, "frames": ["frames/scene03/f-000.webp", "frames/scene03/f-001.webp", "frames/scene03/f-002.webp", "frames/scene03/f-003.webp", "frames/scene03/f-004.webp", "frames/scene03/f-005.webp", "frames/scene03/f-006.webp", "frames/scene03/f-007.webp", "frames/scene03/f-008.webp", "frames/scene03/f-009.webp", "frames/scene03/f-010.webp", "frames/scene03/f-011.webp", "frames/scene03/f-012.webp", "frames/scene03/f-013.webp", "frames/scene03/f-014.webp", "frames/scene03/f-015.webp"]}, {"id": "scene04", "duration": 4.0, "frames": ["frames/scene04/f-000.webp", "frames/scene04/f-001.webp", "frames/scene04/f-002.webp", "frames/scene04/f-003.webp", "frames/scene04/f-004.webp", "frames/scene04/f-005.webp", "frames/scene04/f-006.webp", "frames/scene04/f-007.webp", "frames/scene04/f-008.webp", "frames/scene04/f-009.webp"]}, {"id": "scene05", "duration": 4.0, "frames": ["frames/scene05/f-000.webp", "frames/scene05/f-001.webp", "frames/scene05/f-002.webp", "frames/scene05/f-003.webp", "frames/scene05/f-004.webp", "frames/scene05/f-005.webp", "frames/scene05/f-006.webp", "frames/scene05/f-007.webp", "frames/scene05/f-008.webp", "frames/scene05/f-009.webp"]}, {"id": "scene06", "duration": 7.466667, "frames": ["frames/scene06/f-000.webp", "frames/scene06/f-001.webp", "frames/scene06/f-002.webp", "frames/scene06/f-003.webp", "frames/scene06/f-004.webp", "frames/scene06/f-005.webp", "frames/scene06/f-006.webp", "frames/scene06/f-007.webp", "frames/scene06/f-008.webp", "frames/scene06/f-009.webp", "frames/scene06/f-010.webp", "frames/scene06/f-011.webp", "frames/scene06/f-012.webp", "frames/scene06/f-013.webp", "frames/scene06/f-014.webp", "frames/scene06/f-015.webp", "frames/scene06/f-016.webp", "frames/scene06/f-017.webp", "frames/scene06/f-018.webp"]}, {"id": "scene07", "duration": 5.0, "frames": ["frames/scene07/f-000.webp", "frames/scene07/f-001.webp", "frames/scene07/f-002.webp", "frames/scene07/f-003.webp", "frames/scene07/f-004.webp", "frames/scene07/f-005.webp", "frames/scene07/f-006.webp", "frames/scene07/f-007.webp", "frames/scene07/f-008.webp", "frames/scene07/f-009.webp", "frames/scene07/f-010.webp", "frames/scene07/f-011.webp", "frames/scene07/f-012.webp"]}, {"id": "scene08", "duration": 5.0, "frames": ["frames/scene08/f-000.webp", "frames/scene08/f-001.webp", "frames/scene08/f-002.webp", "frames/scene08/f-003.webp", "frames/scene08/f-004.webp", "frames/scene08/f-005.webp", "frames/scene08/f-006.webp", "frames/scene08/f-007.webp", "frames/scene08/f-008.webp", "frames/scene08/f-009.webp", "frames/scene08/f-010.webp", "frames/scene08/f-011.webp", "frames/scene08/f-012.webp"]}, {"id": "scene09", "duration": 5.633333, "frames": ["frames/scene09/f-000.webp", "frames/scene09/f-001.webp", "frames/scene09/f-002.webp", "frames/scene09/f-003.webp", "frames/scene09/f-004.webp", "frames/scene09/f-005.webp", "frames/scene09/f-006.webp", "frames/scene09/f-007.webp", "frames/scene09/f-008.webp", "frames/scene09/f-009.webp", "frames/scene09/f-010.webp", "frames/scene09/f-011.webp", "frames/scene09/f-012.webp", "frames/scene09/f-013.webp"]}, {"id": "scene10", "duration": 1.533322, "frames": ["frames/scene10/f-000.webp", "frames/scene10/f-001.webp", "frames/scene10/f-002.webp", "frames/scene10/f-003.webp", "frames/scene10/f-004.webp", "frames/scene10/f-005.webp"]}];
-const sceneRoot=document.getElementById('scenes');
-const sceneEls=[];
-sequences.slice(1,-1).forEach((seq,idx)=>{
- const section=document.createElement('section');section.className='scroll-scene';section.dataset.scene=seq.id;
- const sticky=document.createElement('div');sticky.className='sticky-frame';
- const img=document.createElement('img');img.alt='Adegan undangan '+(idx+1);img.loading=idx===0?'eager':'lazy';img.decoding='async';
- const nextImg=document.createElement('img');nextImg.className='frame-next';nextImg.alt='';nextImg.decoding='async';
- img.src=seq.frames[0];nextImg.src=seq.frames[0];sticky.appendChild(img);sticky.appendChild(nextImg);
- // Preload all frames in this scene to prevent blank/white flashes during scrolling.
- seq.frames.forEach(src=>{const preload=new Image();preload.src=src;});
- const label=document.createElement('div');label.className='scroll-label';label.textContent='GULIR UNTUK MELANJUTKAN';sticky.appendChild(label);
- section.appendChild(sticky);sceneRoot.appendChild(section);sceneEls.push({section,img,nextImg,seq,last:-1,showNext:false});
-});
-function updateFrames(){
- const vh=window.innerHeight||innerHeight;
- for(const item of sceneEls){
-   const r=item.section.getBoundingClientRect();
-   const travel=Math.max(1,item.section.offsetHeight-vh);
-   const progress=Math.max(0,Math.min(1,-r.top/travel));
-   const frameCount=item.seq.frames.length-1; const startProgress=Math.min(.55, Math.max(.25, 4/Math.max(1,frameCount))); const eased=Math.min(1,progress*1.15); const idx=Math.min(frameCount,Math.floor((startProgress + eased*(1-startProgress))*frameCount+.5));
-   if(idx!==item.last){
-     const target=item.seq.frames[idx];
-     const incoming=item.showNext?item.img:item.nextImg;
-     const outgoing=item.showNext?item.nextImg:item.img;
-     if(incoming.getAttribute('src')!==target) incoming.src=target;
-     incoming.style.opacity='0';
-     requestAnimationFrame(()=>{incoming.style.opacity='1';outgoing.style.opacity='0';});
-     item.showNext=!item.showNext;item.last=idx;
-   }
- }
-}
-let raf=0;window.addEventListener('scroll',()=>{if(!raf)raf=requestAnimationFrame(()=>{updateFrames();raf=0;})},{passive:true});
-window.addEventListener('resize',updateFrames);updateFrames();
-const cover=document.getElementById('cover'),music=document.getElementById('music'),musicBtn=document.getElementById('musicBtn');let opened=false;
-async function openInvite(){
- if(opened)return;opened=true;cover.classList.add('open');musicBtn.classList.add('show');
- try{await music.play();musicBtn.classList.add('playing');musicBtn.textContent='♫';}catch(e){musicBtn.textContent='▶';}
- setTimeout(()=>document.getElementById('intro').scrollIntoView({behavior:'smooth',block:'start'}),1050);
-}
-cover.addEventListener('click',openInvite);cover.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openInvite();}});
-musicBtn.addEventListener('click',async()=>{if(music.paused){try{await music.play();musicBtn.classList.add('playing');musicBtn.textContent='♫';}catch(e){}}else{music.pause();musicBtn.classList.remove('playing');musicBtn.textContent='▶';}});
-</script>
-</body>
-</html>
+(()=>{const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;const audio=document.getElementById('musicAudio'),musicBtn=document.getElementById('musicBtn');let playing=false;
+async function toggleMusic(){if(!playing){try{await audio.play();playing=true;musicBtn.classList.add('playing');musicBtn.textContent='Ⅱ';musicBtn.setAttribute('aria-label','Jeda musik')}catch(e){musicBtn.textContent='♫'}}else{audio.pause();playing=false;musicBtn.classList.remove('playing');musicBtn.textContent='♫';musicBtn.setAttribute('aria-label','Putar musik')}}musicBtn.addEventListener('click',toggleMusic);
+document.getElementById('openBtn').addEventListener('click',()=>{if(!playing)toggleMusic();document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));document.querySelectorAll('.section')[0].scrollIntoView({behavior:reduce?'auto':'smooth'})});
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.15,rootMargin:'0px 0px -4% 0px'});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+})();
+</script></body></html>
