@@ -1,20 +1,10 @@
-UNDANGAN PERNIKAHAN SANTI FATIMAH & SYAUQI SYAUQILLAH
+Undangan Pernikahan Santi Fatimah & Syauqi Syauqillah
 
-Isi folder:
+Isi paket:
 - index.html: website undangan
-- assets/: latar/ilustrasi dari desain undangan
-- music.mp3: musik latar
+- assets/: gambar latar Canva dan logo rekening
+- music.mp3: musik baru dari file yang dikirim
 
-CARA PAKAI:
-Upload index.html, folder assets, dan music.mp3 ke hosting yang sama.
+Pastikan index.html, folder assets, dan music.mp3 diunggah bersama ke hosting dengan struktur yang sama.
 
-PERUBAHAN:
-- Teks "Scan GoogleMaps" dan kalimat "QR nya yang tadi diatas sama lokasinya sama" dihapus dari panel HTML.
-- QR tetap dipertahankan pada gambar latar Canva.
-- Alamat ditampilkan: kp ciharus lebak Rt02/Rw04 Desa Girijaya Cikajang Garut
-- Ditambahkan formulir nama tamu, status Hadir/Tidak hadir, ucapan, dan daftar ucapan.
-
-CATATAN PENTING BUKU TAMU:
-Saat ini daftar ucapan disimpan di localStorage browser/perangkat yang dipakai. Ini berguna untuk uji coba, tetapi belum otomatis dibagikan ke semua pengunjung di perangkat lain. Agar ucapan benar-benar tersimpan online dan dapat dilihat semua orang, website perlu dihubungkan ke database online (misalnya Supabase/Firebase) dan konfigurasi proyeknya.
-
-Buku tamu online terhubung ke Supabase project undangan-santi-syauqi. Pastikan tabel public.ucapan_tamu, RLS policies, dan Data API aktif. Publishable key berada di frontend dan aman digunakan bersama kebijakan RLS yang benar; jangan pernah menambahkan secret/service_role key ke website.
+Buku tamu menggunakan Supabase Project URL dan publishable key yang disetel pada index.html. Jika ingin mengubah konfigurasi, edit konstanta SUPABASE_URL dan SUPABASE_KEY di bagian script.
