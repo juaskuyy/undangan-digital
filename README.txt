@@ -16,3 +16,5 @@ PERUBAHAN:
 
 CATATAN PENTING BUKU TAMU:
 Saat ini daftar ucapan disimpan di localStorage browser/perangkat yang dipakai. Ini berguna untuk uji coba, tetapi belum otomatis dibagikan ke semua pengunjung di perangkat lain. Agar ucapan benar-benar tersimpan online dan dapat dilihat semua orang, website perlu dihubungkan ke database online (misalnya Supabase/Firebase) dan konfigurasi proyeknya.
+
+Buku tamu online terhubung ke Supabase project undangan-santi-syauqi. Pastikan tabel public.ucapan_tamu, RLS policies, dan Data API aktif. Publishable key berada di frontend dan aman digunakan bersama kebijakan RLS yang benar; jangan pernah menambahkan secret/service_role key ke website.
